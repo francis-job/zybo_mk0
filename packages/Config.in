@@ -1,0 +1,12 @@
+menu "External Packages"
+
+menu "Userspace Packages" 
+	source "$BR2_EXTERNAL_ZYBO_PATH/packages/hello_francis/Config.in"
+endmenu
+
+menu "Kernel Modules"
+	source "$BR2_EXTERNAL_ZYBO_PATH/packages/kernel_test_module/Config.in"
+endmenu
+
+endmenu
+

@@ -1,1 +1,1 @@
-source "$BR2_EXTERNAL_ZYBO_PATH/packages/hello_francis/Config.in"
+source "$BR2_EXTERNAL_ZYBO_PATH/packages/Config.in"

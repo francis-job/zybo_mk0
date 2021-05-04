@@ -1,0 +1,1 @@
+obj-m += kernel_test_module.o

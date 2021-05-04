@@ -1,0 +1,6 @@
+config BR2_PACKAGE_KERNEL_TEST_MODULE
+	bool "kernel_test_module"
+	help
+		kernel test module for buildroot integration.
+
+		http://example.com
