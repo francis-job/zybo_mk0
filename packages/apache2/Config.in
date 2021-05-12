@@ -10,6 +10,8 @@ config BR2_PACKAGE_APACHE2
 
 if BR2_PACKAGE_APACHE2
 
+#BR2_ROOTFS_OVERLAY = "$(BR2_EXTERNAL_ZYBO_PATH)/rootfs_overlay"
+
 config BR2_PACKAGE_APACHE2_MPM_WORKER
         bool "worker"
 	default y

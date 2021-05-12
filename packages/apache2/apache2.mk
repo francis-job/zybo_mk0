@@ -6,8 +6,9 @@ APACHE2_LICENSE_FILES   = LICENSE
 APACHE2_CPE_ID_VENDOR   = apache
 APACHE2_CPE_ID_PRODUCT  = http_server
 APACHE2_AUTORECONF = YES
-
+APACHE_INSTALL_STAGING = YES
 APACHE2_DEPENDENCIES = apr apr-util pcre
+
 
 APACHE2_CONF_ENV= \
         ap_cv_void_ptr_lt_long=no \
@@ -49,10 +50,10 @@ define APACHE2_INSTALL_INIT_SYSV
                  $(TARGET_DIR)/etc/init.d/S50apache 
 endef 
   
-define APACHE2_INSTALL_INIT_SYSTEMD 
-         $(INSTALL) -D -m 644 $(BR2_EXTERNAL_ZYBO_PATH)/packages/apache2/apache.service \ 
-                 $(TARGET_DIR)/usr/lib/systemd/system/apache.service 
-endef 
+#define APACHE2_INSTALL_INIT_SYSTEMD 
+#         $(INSTALL) -D -m 0755 $(BR2_EXTERNAL_ZYBO_PATH)/packages/apache2/apache.service \ 
+#                 $(TARGET_DIR)/usr/lib/systemd/system/apache.service 
+#endef 
   
  $(eval $(autotools-package))
 
