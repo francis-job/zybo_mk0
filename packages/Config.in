@@ -8,5 +8,9 @@ menu "Kernel Modules"
 	source "$BR2_EXTERNAL_ZYBO_PATH/packages/kernel_test_module/Config.in"
 endmenu
 
+menu "Web server App"
+	source "$BR2_EXTERNAL_ZYBO_PATH/packages/apache2/Config.in"
+endmenu
+
 endmenu
 

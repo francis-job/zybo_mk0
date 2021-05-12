@@ -5,9 +5,20 @@ config BR2_PACKAGE_APACHE2
 	depends on BR2_USE_MMU
 	select BR2_PACKAGE_APR_UTIL
 	select BR2_PACKAGE_PCRE
-	select BR2_PACKAGE_APACHE_MPM_WORKER
 	help
 	  Apache web server package for testing
+
+if BR2_PACKAGE_APACHE2
+
+config BR2_PACKAGE_APACHE2_MPM_WORKER
+        bool "worker"
+	default y
+        help
+          Implements a hybrid multi-threaded multi-process web server
+
+
+endif
+
 
 comment "apache needs a toolchain w/ dynamic library, threads"
         depends on BR2_USE_MMU
